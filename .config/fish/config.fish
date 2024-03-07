@@ -125,5 +125,8 @@ abbr -a dprod 'doppler setup -c prd --no-read-env --no-interactive'
 
 abbr -a now '$EDITOR ~/.config/conky/content.md'
 
+abbr -a gpl 'git pull'
+abbr -a gps 'git push'
+
 starship init fish | source
 jump shell fish | source
