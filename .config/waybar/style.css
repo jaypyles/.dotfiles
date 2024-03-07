@@ -1,0 +1,222 @@
+/* Keyframes */
+
+@keyframes blink-critical {
+  to {
+    /*color: @white;*/
+    background-color: @critical;
+  }
+}
+
+/* Styles */
+
+/* Colors (gruvbox) */
+@define-color black	#282828;
+@define-color red	#cc241d;
+@define-color yellow	#d79921;
+@define-color green	#98971a;
+@define-color aqua	#689d6a;
+@define-color blue	#458588;
+@define-color purple	#b16286;
+@define-color gray	#928374;
+
+/* bright */
+@define-color white	#ebdbb2;
+@define-color brred	#fb4934;
+@define-color bryellow	#fabd2f;
+@define-color brgreen	#b8bb26;
+@define-color braqua	#8ec07c;
+@define-color brblue	#83a598;
+@define-color brpurple	#d3869b;
+@define-color brgray	#a89984;
+
+@define-color bg2	#504945;
+
+@define-color warning 	@bryellow;
+@define-color critical	@brred;
+@define-color unfocused	@bg2;
+@define-color focused	@white;
+@define-color inactive	@purple;
+
+@define-color workspaces	@white;
+@define-color taskbar	@white;
+
+@define-color time	@white;
+@define-color backlight	@gray;
+@define-color date	@black;
+@define-color language	@yellow;
+@define-color network	@purple;
+@define-color cpu	@green;
+@define-color temp	@green;
+@define-color battery	@aqua;
+@define-color memory	@blue;
+@define-color disk	@blue;
+@define-color sound	@purple;
+@define-color source	@purple;
+
+/* Reset all styles */
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}
+
+/* The whole bar */
+#waybar {
+  background: rgba(40, 40, 40, 0.9); /* #282828e0 */
+  color: @white;
+  font-family: TerminessNerdFont;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#language,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#backlight,
+#idle_inhibitor,
+#disk,
+#user,
+#mpris {
+  padding-left: 8pt;
+  padding-right: 8pt;
+}
+
+/* Each critical module */
+#mode,
+#memory.critical,
+#cpu.critical,
+#temperature.critical,
+#battery.critical.discharging {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: blink-critical;
+  animation-duration: 1s;
+}
+
+/* Each warning */
+#network.disconnected,
+#memory.warning,
+#cpu.warning,
+#temperature.warning,
+#battery.warning.discharging {
+  color: @warning;
+}
+
+/* Workspaces stuff */
+#workspaces button, 
+#taskbar button {
+  /* font-weight: bold; */
+  padding-left: 4pt;
+  padding-right: 4pt;
+  color: @white;
+  background: @unfocused;
+}
+
+/* Inactive (on unfocused output) */
+#workspaces button.visible,
+#taskbar button.visible {
+  color: @white;
+  background: @inactive;
+}
+
+/* Active (on focused output) */
+#workspaces button.active,
+#taskbar button.active {
+  color: @black;
+  background: @focused;
+}
+
+/* Contains an urgent window */
+#workspaces button.urgent {
+  color: @white;
+  background: @warning;
+}
+
+/* Style when cursor is on the button */
+#workspaces button:hover {
+  background: @black;
+  color: @white;
+}
+
+#window {
+  margin-right: 35pt;
+  margin-left: 35pt;
+}
+
+#pulseaudio {
+  background: @sound;
+  color: @white;
+  font-weight: normal;
+}
+
+#network {
+  background: @network;
+  color: @white;
+}
+
+#memory {
+  background: @memory;
+  color: @white;
+}
+
+#cpu {
+  background: @cpu;
+  color: @white;
+}
+
+#disk {
+  background: @disk;
+}
+
+#temperature {
+  background: @temp;
+  color: @white;
+}
+
+#language {
+  background: @language;
+  color: @white;
+}
+
+#battery {
+  background: @battery;
+  color: @white;
+}
+
+#backlight {
+  background: @backlight;
+  color: @white;
+}
+
+#tray {
+  background: @bg2;
+}
+
+#taskbar {
+  background: @bg2;
+  color: @white;
+}
+
+#clock.date {
+  background: @bg2;
+  color: @white;
+}
+
+#clock.time {
+  background: @time;
+  color: @black;
+}
