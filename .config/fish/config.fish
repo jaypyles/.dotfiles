@@ -114,6 +114,7 @@ abbr -a weather 'curl -s "wttr.in/?format=%c+%l:+%C+%t+%w+%h" | sed "s/,.*:/:/g"
 
 abbr -a pacclean 'pacman -Qtdq | paru -Rcns -'
 abbr -a config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+abbr -a pn 'pdm run nvim'
 abbr -a nvimconf '$EDITOR ~/.config/nvim/lua/*/*.lua'
 abbr -a fishconf '$EDITOR ~/.config/fish/config.fish'
 abbr -a termconf '$EDITOR ~/.config/kitty/kitty.conf'
