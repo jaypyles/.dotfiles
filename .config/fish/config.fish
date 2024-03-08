@@ -130,3 +130,4 @@ abbr -a gps 'git push'
 
 starship init fish | source
 jump shell fish | source
+mise activate fish | source
