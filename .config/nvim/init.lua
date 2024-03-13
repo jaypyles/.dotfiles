@@ -30,7 +30,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.offsetEncoding = { "utf-16" }
 require("lspconfig").clangd.setup({ capabilities = capabilities })
 -- Load the colorscheme after the configuration
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme pywal")
 
 --fix terraform and hcl comment string
 vim.api.nvim_create_autocmd("FileType", {
