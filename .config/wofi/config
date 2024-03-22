@@ -1,9 +1,5 @@
 mode=drun
-width=320
-height=620
-xoffset=0
-yoffset=0
-layer=overlay
+location=center
 
 prompt=search
 allow_images=true
@@ -12,7 +8,6 @@ term=kitty --single-instance
 hide_scroll=true
 matching=fuzzy
 insensitive=true
-orientation=vertical
 image_size=20
 filter_rate=5
 no_actions=true

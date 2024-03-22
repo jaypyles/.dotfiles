@@ -1,10 +1,12 @@
+@import "/home/jayden/.cache/wal/colors-waybar.css";
+
 @define-color base00 #282828;
 @define-color base01 #3C3836;
 @define-color base02 #504945;
 @define-color base03 #665C54;
 @define-color base04 #BDAE93;
-@define-color base06 #D5C4A1;
-@define-color base06 #EBDBB2;
+@define-color bace06 #D5C4A1;
+@define-color bace06 #EBDBB2;
 @define-color base07 #FBF1C7;
 @define-color base08 #FB4934;
 @define-color base09 #FE8019;
@@ -28,24 +30,24 @@ window {
   padding-left: 10px;
   font-size: 28px;
   font-weight: bold;
-  color: @base07;
-  background-color: #554444;
+  color: white;
+  background-color: @color1;
 }
 
 #inner-box {
   margin: 0px;
   padding: 0px;
-  color: @base06;
-  background-color: @base00;
+  color: @foreground;
+  background-color: @color1;
 }
 
 #outer-box {
   margin: 0px;
-  background-color: @base00;
+  background-color: @color1;
 }
 
 #selected {
-  background-color: #507676;
+  background-color: @foreground;
   border-radius: 5px;
   font-weight: bold;
 }
@@ -53,13 +55,13 @@ window {
 #entry {
   padding: 0px;
   margin: 0px;
-  background-color: @base00;
+  background-color: @background;
 }
 
 #scroll {
   margin: 0px;
   padding: 4px;
-  background-color: @base00;
+  background-color: @color1;
 }
 
 #img {

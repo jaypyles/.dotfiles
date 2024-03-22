@@ -130,8 +130,8 @@
 /* Inactive (on unfocused output) */
 #workspaces button.visible,
 #taskbar button.visible {
-  color: @white;
-  background: @inactive;
+  color: @foreground;
+  background: @color6;
 }
 
 /* Active (on focused output) */
@@ -143,8 +143,8 @@
 
 /* Contains an urgent window */
 #workspaces button.urgent {
-  color: @white;
-  background: @warning;
+  color: @forground;
+  background: @color5;
 }
 
 /* Style when cursor is on the button */
