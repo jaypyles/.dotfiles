@@ -133,3 +133,5 @@ jump shell fish | source
 mise activate fish | source
 
 cat ~/.cache/wal/sequences
+
+fish_add_path /home/jayden/.spicetify
