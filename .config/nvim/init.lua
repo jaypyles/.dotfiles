@@ -29,8 +29,16 @@ require("ollama-nvim")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.offsetEncoding = { "utf-16" }
 require("lspconfig").clangd.setup({ capabilities = capabilities })
+
 -- Load the colorscheme after the configuration
-vim.cmd("colorscheme onedark")
+-- vim.cmd "colorscheme lushwal"
+-- require("lushwal").add_reload_hook {
+--   vim.cmd "LushwalCompile",
+-- }
+vim.cmd "colorscheme onedark"
+
+-- disable whole line highlighting
+vim.o.cursorline = false
 
 --fix terraform and hcl comment string
 vim.api.nvim_create_autocmd("FileType", {
@@ -40,3 +48,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
   pattern = { "esdl", "hcl" },
 })
+
+require("neo-tree").setup({
+  enable_git_status = false })

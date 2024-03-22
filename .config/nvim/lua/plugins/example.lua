@@ -9,24 +9,15 @@ if true then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  -- load catppuccin
-  {
-    "catppuccin/vim.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd([[colorscheme catppuccin-mocha]])
-    end,
-  },
-
   -- change trouble config
+  { "folke/tokyonight.nvim", enabled = false },
   {
     "folke/trouble.nvim",
     -- opts will be merged with the parent spec
     opts = { use_diagnostic_signs = true },
   },
   -- disable trouble
-  { "folke/trouble.nvim",                             enabled = false },
+  { "folke/trouble.nvim",    enabled = false },
 
   -- add symbols-outline
   {
