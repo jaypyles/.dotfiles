@@ -137,8 +137,8 @@
 /* Active (on focused output) */
 #workspaces button.active,
 #taskbar button.active {
-  color: @background;
-  background: @foreground;
+  color: @foreground;
+  background: @color1;
 }
 
 /* Contains an urgent window */
@@ -149,7 +149,7 @@
 
 /* Style when cursor is on the button */
 #workspaces button:hover {
-  background: @color1;
+  background: @foreground;
   color: @background;
 }
 
@@ -159,32 +159,32 @@
 }
 
 #pulseaudio {
-  background: @sound;
+  background: @color2;
   color: @white;
   font-weight: normal;
 }
 
 #network {
-  background: @network;
+  background: @color3;
   color: @white;
 }
 
 #memory {
-  background: @memory;
+  background: @color4;
   color: @white;
 }
 
 #cpu {
-  background: @cpu;
+  background: @color4;
   color: @white;
 }
 
 #disk {
-  background: @disk;
+  background: @color5;
 }
 
 #temperature {
-  background: @temp;
+  background: @color5;
   color: @white;
 }
 
@@ -194,12 +194,12 @@
 }
 
 #battery {
-  background: @battery;
+  background: @color5;
   color: @white;
 }
 
 #backlight {
-  background: @backlight;
+  background: @color5;
   color: @white;
 }
 
