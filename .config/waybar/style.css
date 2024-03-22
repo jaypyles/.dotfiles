@@ -160,47 +160,47 @@
 
 #pulseaudio {
   background: @color2;
-  color: @white;
+  color: @foreground;
   font-weight: normal;
 }
 
 #network {
   background: @color3;
-  color: @white;
+  color: @foreground;
 }
 
 #memory {
-  background: @color4;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #cpu {
-  background: @color4;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #disk {
-  background: @color5;
+  background: @color3;
 }
 
 #temperature {
-  background: @color5;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #language {
   background: @language;
-  color: @white;
+  color: @foreground;
 }
 
 #battery {
-  background: @color5;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #backlight {
-  background: @color5;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #tray {
