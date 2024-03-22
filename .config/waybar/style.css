@@ -138,7 +138,7 @@
 #workspaces button.active,
 #taskbar button.active {
   color: @foreground;
-  background: @color1;
+  background: @color2;
 }
 
 /* Contains an urgent window */
