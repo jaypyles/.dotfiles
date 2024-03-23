@@ -1,15 +1,15 @@
 theme:
-  active: 240, 57, 92
-  banner: 240, 57, 92
+  active: 177, 182, 99
+  banner: 177, 182, 99
   error_border: Red
   error_text: LightRed
   header: White
-  hint: 161, 69, 95
-  hovered: 161, 69, 95
+  hint: 26, 74, 170
+  hovered: 26, 74, 170
   inactive: Gray
   playbar_background: Black
-  playbar_progress: 240, 57, 92
-  playbar_progress_text: 192, 192, 193
+  playbar_progress: 177, 182, 99
+  playbar_progress_text: 191, 191, 193
   playbar_text: White
-  selected: 240, 57, 92
+  selected: 177, 182, 99
   text: 255, 255, 255
