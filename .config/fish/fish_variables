@@ -12,6 +12,7 @@ SETUVAR _fish_abbr_boxdraw:curl\x20https\x3a//www\x2ecl\x2ecam\x2eac\x2euk/\x7em
 SETUVAR _fish_abbr_cat:bat
 SETUVAR _fish_abbr_config:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2ecfg/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
 SETUVAR _fish_abbr_cp:cp\x20\x2di
+SETUVAR _fish_abbr_cw:\x24HOME/\x2econfig/hypr/scripts/initWallpaper\x2esh\x202\x26\x3e1
 SETUVAR _fish_abbr_d:ddgr
 SETUVAR _fish_abbr_dcl:docker\x20container\x20ls
 SETUVAR _fish_abbr_de:docker\x20exec\x20\x2dit

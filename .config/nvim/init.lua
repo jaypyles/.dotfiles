@@ -19,7 +19,7 @@ require("nightly").setup({
 
 -- Load "drop"
 require("drop").setup({
-  theme = "snow",
+  theme = "spring",
   max = "20",
 })
 
@@ -35,7 +35,7 @@ require("lspconfig").clangd.setup({ capabilities = capabilities })
 -- require("lushwal").add_reload_hook {
 --   vim.cmd "LushwalCompile",
 -- }
-vim.cmd "colorscheme onedark"
+vim.cmd("colorscheme onedark")
 
 -- disable whole line highlighting
 vim.o.cursorline = false
@@ -50,4 +50,5 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 require("neo-tree").setup({
-  enable_git_status = false })
+  enable_git_status = false,
+})

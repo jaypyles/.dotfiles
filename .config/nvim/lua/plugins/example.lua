@@ -17,7 +17,7 @@ return {
     opts = { use_diagnostic_signs = true },
   },
   -- disable trouble
-  { "folke/trouble.nvim",    enabled = false },
+  { "folke/trouble.nvim", enabled = false },
 
   -- add symbols-outline
   {
@@ -190,13 +190,13 @@ return {
   -- use mini.starter instead of alpha
   {
     import = "lazyvim.plugins.extras.ui.mini-starter",
-    enabled = false
+    enabled = false,
   },
 
   -- add jsonls and schemastore ans setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
-
   { import = "lazyvim.plugins.extras.mini-comment" },
+  { import = "lazyvim.plugins.extras.lsp.none-ls", enabled = true },
 
   -- add any tools you want to have installed below
   {
