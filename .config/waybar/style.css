@@ -130,26 +130,26 @@
 /* Inactive (on unfocused output) */
 #workspaces button.visible,
 #taskbar button.visible {
-  color: @white;
-  background: @inactive;
+  color: @foreground;
+  background: @color6;
 }
 
 /* Active (on focused output) */
 #workspaces button.active,
 #taskbar button.active {
-  color: @background;
-  background: @foreground;
+  color: @foreground;
+  background: @color2;
 }
 
 /* Contains an urgent window */
 #workspaces button.urgent {
-  color: @white;
-  background: @warning;
+  color: @forground;
+  background: @color5;
 }
 
 /* Style when cursor is on the button */
 #workspaces button:hover {
-  background: @color1;
+  background: @foreground;
   color: @background;
 }
 
@@ -159,48 +159,48 @@
 }
 
 #pulseaudio {
-  background: @sound;
-  color: @white;
+  background: @color2;
+  color: @foreground;
   font-weight: normal;
 }
 
 #network {
-  background: @network;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #memory {
-  background: @memory;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #cpu {
-  background: @cpu;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #disk {
-  background: @disk;
+  background: @color3;
 }
 
 #temperature {
-  background: @temp;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #language {
   background: @language;
-  color: @white;
+  color: @foreground;
 }
 
 #battery {
-  background: @battery;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #backlight {
-  background: @backlight;
-  color: @white;
+  background: @color3;
+  color: @foreground;
 }
 
 #tray {
