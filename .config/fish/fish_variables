@@ -7,7 +7,7 @@ SETUVAR --export XDG_CACHE_HOME:/home/jayden/\x2ecache
 SETUVAR --export XDG_CONFIG_HOME:/home/jayden/\x2econfig
 SETUVAR --export XDG_DATA_HOME:/home/jayden/\x2elocal/share
 SETUVAR --export XDG_STATE_HOME:/home/jayden/\x2elocal/state
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_boxdraw:curl\x20https\x3a//www\x2ecl\x2ecam\x2eac\x2euk/\x7emgk25/ucs/examples/UTF\x2d8\x2ddemo\x2etxt
 SETUVAR _fish_abbr_cat:bat
 SETUVAR _fish_abbr_config:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2ecfg/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
