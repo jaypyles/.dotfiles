@@ -2,7 +2,7 @@
 set $mod Mod4
 set $terminal kitty --single-instance
 set $browser firefox
-set $wallpapers ~/Media/Wallpapers
+set $wallpapers ~/walls
 set $font pango:TerminessNerdFont 15
 font $font
 
@@ -18,7 +18,7 @@ set_from_resource $term_color5     color5
 set_from_resource $term_color6     color6
 set_from_resource $term_color7     color7
 set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
+set_from_resource $term_color9     color
 set_from_resource $term_color10    color10
 set_from_resource $term_color11    color11
 set_from_resource $term_color12    color12
@@ -27,11 +27,14 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Autostart applications
-exec --no-startup-id feh --bg-scale --randomize --no-fehbg $wallpapers
+exec_always --no-startup-id feh --bg-scale --randomize --no-fehbg $wallpapers
+exec_always --no-startup-id /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME pull origin master
+
 exec --no-startup-id xautolock -time 10 -locker 'i3lock -f -e -c 222222' # ignore empty pw, set background
 exec --no-startup-id nm-applet  # network manager tray icon
 exec --no-startup-id blueman-applet  # bluetooth tray icon
 exec --no-startup-id autorandr -c  # trigger display detection
+
 # exec --no-startup-id picom -b  # compositor
 exec --no-startup-id conky  # background notes
 exec --no-startup-id ibus-daemon -drx  # input method changing
@@ -57,7 +60,7 @@ bindsym --release Scroll_Lock exec $normalnotif "Scroll Lock" "$(xset q | grep '
 bindsym $mod+Return exec $terminal
 bindsym $mod+o exec $browser
 bindsym $mod+Ctrl+l exec i3lock -e -c 222222
-bindsym $mod+d exec rofi -show
+bindsym $mod+d exec rofi -show drun
 
 # program actions on binds
 bindsym $mod+Shift+w exec feh --bg-scale --randomize --no-fehbg $wallpapers && $normalnotif "Feh"
@@ -154,22 +157,18 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Are you sure you want to exit i3?' -b 'Confirm' 'i3-msg exit'"
 
 bar {
-    i3bar_command i3bar
-    status_command i3status-rs
-    position top
-    separator_symbol "▕ "
-    strip_workspace_numbers no  # never remove workspace numbers
-    colors {
-        background $term_background
-        statusline $term_color15
-        separator  $term_foreground
+      status_command i3status
+      position top
+      colors {
+      background #2f343f
+      statusline #2f343f
+      separator #4b5262
 
-        # name_of_area     border             backgr.            text
-        focused_workspace  $term_foreground   $term_color12      $term_color7
-        active_workspace   $term_foreground   $term_color5       $term_color7
-        inactive_workspace $term_background   $term_background   $term_color15
-        binding_mode       $term_foreground   $term_color9       $term_color7
-        urgent_workspace   $term_foreground   $term_color1       $term_color7
+      # colour of border, background, and text
+      focused_workspace       #2f343f #bf616a #d8dee8
+      active_workspace        #2f343f #2f343f #d8dee8
+      inactive_workspace      #2f343f #2f343f #d8dee8
+      urgent_workspacei       #2f343f #ebcb8b #2f343f
     }
 }
 
@@ -177,12 +176,12 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors, primarily affects tab/menu bars
 # class                   border             background         text            indicator          child_border
-client.focused            $term_background   $term_color12      $term_color7    $term_color1       $term_foreground
-client.focused_inactive   $term_background   $term_color12      $term_color7    $term_color1       $term_foreground
-client.unfocused          $term_color0       $term_background   $term_color15   $term_color8       $term_color0
-client.urgent             $term_foreground   $term_color1       $term_color7    $term_color1       $term_background
-client.placeholder        $term_foreground   $term_background   $term_color7    $term_background   $term_background
-client.background                            $term_background
+# client.focused            $term_background   $term_color12      $term_color7    $term_color1       $term_foreground
+# client.focused_inactive   $term_background   $term_color12      $term_color7    $term_color1       $term_foreground
+# client.unfocused          $term_color0       $term_background   $term_color15   $term_color8       $term_color0
+# client.urgent             $term_foreground   $term_color1       $term_color7    $term_color1       $term_background
+# client.placeholder        $term_foreground   $term_background   $term_color7    $term_background   $term_background
+# client.background                            $term_background
 
 # Border style <normal|pixel xx|none>
 default_border pixel 1
