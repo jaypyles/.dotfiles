@@ -30,6 +30,7 @@ set_from_resource $term_color15    color15
 exec_always --no-startup-id feh --bg-scale --randomize --no-fehbg $wallpapers
 exec_always --no-startup-id /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME pull origin master
 
+exec shutter --min_at_startup
 exec --no-startup-id xautolock -time 10 -locker 'i3lock -f -e -c 222222' # ignore empty pw, set background
 exec --no-startup-id nm-applet  # network manager tray icon
 exec --no-startup-id blueman-applet  # bluetooth tray icon
@@ -61,6 +62,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+o exec $browser
 bindsym $mod+Ctrl+l exec i3lock -e -c 222222
 bindsym $mod+d exec rofi -show drun
+bindsym $mod+Shift+s exec shutter --select
 
 # program actions on binds
 bindsym $mod+Shift+w exec feh --bg-scale --randomize --no-fehbg $wallpapers && $normalnotif "Feh"
@@ -94,7 +96,7 @@ bindsym $mod+t layout toggle stacking tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-bindsym $mod+Shift+s sticky toggle
+# bindsym $mod+Shift+s sticky toggle
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
