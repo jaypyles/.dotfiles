@@ -9,6 +9,8 @@
 {
   "theme": "Catppuccin Mocha",
   "relative_line_numbers": true,
+  "format_on_save": "on",
+  "formatter": { "external": { "command": "black", "arguments": ["-"] } },
   "ui_font_size": 18,
   "buffer_font_size": 16,
   "vim_mode": true,
@@ -17,4 +19,13 @@
     "use_multiline_find": true,
     "context": "Dock"
   }
+  // "language_overrides": {
+  //   "Python": {
+  //     "formatter": {
+  //       "external": {
+  //         "command": "black",
+  //         "arguments": ["-"]
+  //       }
+  //     }
+  //   }
 }
