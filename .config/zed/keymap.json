@@ -1,0 +1,38 @@
+[
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "space space": "file_finder::Toggle",
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "shift-k": "editor::Hover",
+      "ctrl-l": "pane::ActivateNextItem",
+      "ctrl-h": "pane::ActivatePrevItem",
+      "shift-t": "workspace::NewCenterTerminal",
+      "space t": ["workspace::SendKeystrokes", "ctrl-k right ctrl-w w shift-t"],
+      "space /": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-n": "workspace::NewTerminal",
+      "ctrl-d": "pane::CloseActiveItem",
+      "cmd-t": "workspace::ToggleBottomDock",
+      "cmd-shift-f": "workspace::ToggleZoom",
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "escape": "terminal_panel::ToggleFocus"
+    }
+  }
+]

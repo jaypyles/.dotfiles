@@ -128,6 +128,7 @@ abbr -a now '$EDITOR ~/.config/conky/content.md'
 abbr -a gpl 'git pull'
 abbr -a gps 'git push'
 abbr -a cw '$HOME/.config/hypr/scripts/initWallpaper.sh 2&>1'
+abbr -a zed 'nohup /usr/bin/Zed . &'
 
 starship init fish | source
 jump shell fish | source
