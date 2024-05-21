@@ -19,7 +19,7 @@ require("nightly").setup({
 
 -- Load "drop"
 require("drop").setup({
-  theme = "spring",
+  theme = "summer",
   max = "20",
 })
 
@@ -30,12 +30,13 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.offsetEncoding = { "utf-16" }
 require("lspconfig").clangd.setup({ capabilities = capabilities })
 
+
 -- Load the colorscheme after the configuration
 -- vim.cmd "colorscheme lushwal"
 -- require("lushwal").add_reload_hook {
 --   vim.cmd "LushwalCompile",
 -- }
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme nightfly")
 
 -- disable whole line highlighting
 vim.o.cursorline = false

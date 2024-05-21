@@ -3,7 +3,7 @@ set $mod Mod4
 set $terminal kitty --single-instance
 set $browser firefox
 set $wallpapers ~/walls
-set $font pango:TerminessNerdFont 15
+set $font pango:Terminus (TTF) 10
 font $font
 
 # i3 color palette  ( ~/.Xresources file )
@@ -182,7 +182,7 @@ bindsym $mod+m bar mode toggle
 # client.focused_inactive   $term_background   $term_color12      $term_color7    $term_color1       $term_foreground
 # client.unfocused          $term_color0       $term_background   $term_color15   $term_color8       $term_color0
 # client.urgent             $term_foreground   $term_color1       $term_color7    $term_color1       $term_background
-# client.placeholder        $term_foreground   $term_background   $term_color7    $term_background   $term_background
+# client.placeholder        $term_foreground   $term_background   $term_color7    $term_background   $term_backgroundconfe
 # client.background                            $term_background
 
 # Border style <normal|pixel xx|none>
