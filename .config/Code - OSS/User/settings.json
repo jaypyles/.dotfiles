@@ -1,8 +1,39 @@
 {
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+  "jupyter.askForKernelRestart": false,
+  "window.zoomLevel": 2,
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": null,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    }
   },
+  "python.formatting.provider": "black",
+  "python.linting.lintOnSave": true,
+  "python.languageServer": "basedpyright",
   "editor.lineNumbers": "relative",
+  "editor.inlayHints.enabled": "off",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["K"],
+      "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
+    }
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
+  "workbench.colorTheme": "Dracula Theme",
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontLigatures": true,
+  "workbench.settings.applyToAllProfiles": ["editor.fontFamily"],
   "editor.inlayHints.enabled": "offUnlessPressed",
   "vim.leader": "<Space>",
   "vim.normalModeKeyBindings": [
@@ -19,20 +50,16 @@
       "commands": ["editor.action.showDefinitionPreviewHover"]
     }
   ],
-  "editor.formatOnSave": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.autoSave": "afterDelay",
   "liveServer.settings.donotShowInfoMsg": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.enabled": false,
+  "vim.useSystemClipboard": true,
+  "files.watcherExclude": {
+    "**/.vscode-server/**": true
   },
-  "workbench.colorTheme": "Dracula Theme",
-  "[python]": {
-    "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-  "security.workspace.trust.untrustedFiles": "open"
+  "isort.args": ["--profile", "black"]
 }
