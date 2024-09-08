@@ -63,6 +63,8 @@ bindsym $mod+o exec $browser
 bindsym $mod+Ctrl+l exec i3lock -e -c 222222
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+Shift+s exec shutter --select
+bindsym $mod+Shift+t exec --no-startup-id ~/.config/i3/scripts/toggle-monitor.sh
+
 
 # program actions on binds
 bindsym $mod+Shift+w exec feh --bg-scale --randomize --no-fehbg $wallpapers && $normalnotif "Feh"
@@ -73,7 +75,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 && $lownotif "Ligh
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && $normalnotif "PulseAudio" $soundcheck
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10% && $lownotif "PulseAudio" $volumecheck
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10% && $lownotif "PulseAudio" $volumecheck
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 0 toggle && $normalnotif "PulseAudio" $miccheck
+bindsym $mod+Ctrl+m exec --no-startup-id ~/.config/i3/scripts/mute-mic.sh
 
 bindsym $mod+Print exec maim -u | tee "$HOME/Media/$(date --iso-8601=seconds).png" | xclip -selection clipboard -t image/png && $normalnotif "Screenshot" "Took screenshot"
 bindsym $mod+Ctrl+Print exec maim -u -i "$(xdotool getactivewindow)" | tee "$HOME/Media/$(date --iso-8601=seconds).png" | xclip -selection clipboard -t image/png && $normalnotif "Screenshot" "Took screenshot of focused window"

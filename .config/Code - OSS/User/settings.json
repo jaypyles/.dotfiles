@@ -3,7 +3,7 @@
   "window.zoomLevel": 2,
   "[python]": {
     "editor.formatOnType": true,
-    "editor.fontSize": 14,
+    "editor.fontSize": 13,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": null,
@@ -17,7 +17,6 @@
   "python.linting.lintOnSave": true,
   "python.languageServer": "basedpyright",
   "editor.lineNumbers": "relative",
-  "editor.inlayHints.enabled": "off",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["K"],
@@ -48,6 +47,10 @@
     {
       "before": ["K"],
       "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": ["workbench.action.findInFiles"]
     }
   ],
   "[typescript]": {
@@ -55,11 +58,18 @@
   },
   "files.autoSave": "afterDelay",
   "liveServer.settings.donotShowInfoMsg": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.minimap.enabled": false,
-  "vim.useSystemClipboard": true,
   "files.watcherExclude": {
     "**/.vscode-server/**": true
   },
-  "isort.args": ["--profile", "black"]
+  "isort.args": ["--profile", "black"],
+  "security.workspace.trust.untrustedFiles": "open",
+  "vim.useSystemClipboard": true,
+  // "explorer.excludeGitIgnore": true,
+  "editor.minimap.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editorAssociations": {
+    "*.png": "imagePreview.previewEditor"
+  },
+  "workbench.iconTheme": "file-icons",
+  "symbols.hidesExplorerArrows": false
 }
