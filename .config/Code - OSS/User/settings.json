@@ -6,16 +6,14 @@
     "editor.fontSize": 13,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
-    "editor.defaultFormatter": null,
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.codeActionsOnSave": {
       "source.organizeImports": "always"
     }
   },
-  "python.formatting.provider": "black",
   "python.linting.lintOnSave": true,
-  "python.languageServer": "basedpyright",
   "editor.lineNumbers": "relative",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -29,7 +27,7 @@
   },
   "editor.formatOnSave": true,
   "notebook.formatOnSave.enabled": true,
-  "workbench.colorTheme": "Dracula Theme",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
   "workbench.settings.applyToAllProfiles": ["editor.fontFamily"],
@@ -71,5 +69,17 @@
     "*.png": "imagePreview.previewEditor"
   },
   "workbench.iconTheme": "file-icons",
-  "symbols.hidesExplorerArrows": false
+  "symbols.hidesExplorerArrows": false,
+  "redhat.telemetry.enabled": true,
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true,
+    "properties": true
+  },
+  "sshfs.configs": [
+    {
+      "name": "test"
+    }
+  ],
+  "editor.semanticHighlighting.enabled": true
 }

@@ -138,3 +138,6 @@ mise activate fish | source
 cat ~/.cache/wal/sequences
 
 fish_add_path /home/jayden/.spicetify
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/jayden/google-cloud-sdk/path.fish.inc' ]; . '/home/jayden/google-cloud-sdk/path.fish.inc'; end
