@@ -49,7 +49,3 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
   pattern = { "esdl", "hcl" },
 })
-
-require("neo-tree").setup({
-  enable_git_status = false,
-})
